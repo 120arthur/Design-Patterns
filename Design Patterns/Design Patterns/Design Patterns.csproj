@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chain Of Responsibility\Class1.cs" />
     <Compile Include="Strategy\CalculateTax.cs" />
     <Compile Include="Strategy\Icms.cs" />
     <Compile Include="Strategy\Tax.cs" />
@@ -53,5 +54,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

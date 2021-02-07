@@ -4,7 +4,7 @@
     {
         public float tax(Budget budget)
         {
-            return budget.Value * 0.5f;
+            return budget.Value * 0.05f;
         }
     }
 }

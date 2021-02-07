@@ -7,7 +7,7 @@ namespace Design_Patterns.Strategy
         public void CalculateTaxes(Budget budget, Tax tax)
         {
             float calculate = tax.tax(budget);
-            Console.WriteLine(calculate);
+            Console.WriteLine("Tax Of: " + calculate);
         }
     }
 }
