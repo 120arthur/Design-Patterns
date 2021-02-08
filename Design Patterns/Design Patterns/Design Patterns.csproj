@@ -42,7 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chain Of Responsibility\Class1.cs" />
+    <Compile Include="Chain Of Responsibility\BudgetDiscount.cs" />
+    <Compile Include="Chain Of Responsibility\CalculateDiscount.cs" />
+    <Compile Include="Chain Of Responsibility\Discont.cs" />
+    <Compile Include="Chain Of Responsibility\Item.cs" />
+    <Compile Include="Chain Of Responsibility\MoreThanFiveHundredDolars.cs" />
+    <Compile Include="Chain Of Responsibility\MorthanFiveItens.cs" />
+    <Compile Include="Chain Of Responsibility\WithoutDiscount.cs" />
+    <Compile Include="Method Template\BudgetTax.cs" />
+    <Compile Include="Method Template\ICPP.cs" />
+    <Compile Include="Method Template\IHIT.cs" />
+    <Compile Include="Method Template\IKCV.cs" />
+    <Compile Include="Method Template\ItemTemplate.cs" />
+    <Compile Include="Method Template\Tax.cs" />
+    <Compile Include="Method Template\TaxCalculationTemplate.cs" />
     <Compile Include="Strategy\CalculateTax.cs" />
     <Compile Include="Strategy\Icms.cs" />
     <Compile Include="Strategy\Tax.cs" />
