@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Design_Patterns.Strategy;
 using Design_Patterns.Chain_Of_Responsibility;
 using Design_Patterns.Method_Template;
 using Design_Patterns.Decorator;
+using Design_Patterns.State;
 
 namespace Design_Patterns
 {
@@ -14,7 +11,10 @@ namespace Design_Patterns
     {
         static void Main(string[] args)
         {
-            // Implementing Strategy examples
+            Console.WriteLine(@"
+            Strategy-----------------------------------------------------
+            ");
+            // Implementing Strategy 
             Budget budget = new Budget(50.0f);
             ISS iss = new ISS();
             Icms icms = new Icms();
@@ -23,7 +23,9 @@ namespace Design_Patterns
             calculateTax.CalculateTaxes(budget, iss);
             calculateTax.CalculateTaxes(budget, icms);
 
-            Console.WriteLine("---------------------------------------------------");
+            Console.WriteLine(@"
+            Chain Of Responsability--------------------------------------
+            ");
             // Implementing Chain Of Responsability
 
             CalculateDiscount calculateDiscount = new CalculateDiscount();
@@ -45,7 +47,9 @@ namespace Design_Patterns
             result = calculateDiscount.Discount(budgetDiscountTwo);
             Console.WriteLine("Discount: " + result);
 
-            Console.WriteLine("---------------------------------------------------");
+            Console.WriteLine(@"
+            Method Template----------------------------------------------
+            ");
             // Implementing Method Template
 
             ICPP icpp = new ICPP();
@@ -66,7 +70,9 @@ namespace Design_Patterns
             result = ihit.tax(budgetTax);
             Console.WriteLine("Discount method3: " + result);
 
-            Console.WriteLine("---------------------------------------------------");
+            Console.WriteLine(@"
+            Decorator ---------------------------------------------------
+            ");
             // Implementing Decorator
 
             TaxDecorator tax = new ISSDecorator(new IcmsDecorator());
@@ -78,7 +84,7 @@ namespace Design_Patterns
             budgetDecorator.AddItemToList(new ItemDecorator("car", 150));
             budgetDecorator.AddItemToList(new ItemDecorator("car", 50));
             budgetDecorator.AddItemToList(new ItemDecorator("tiny toy", 150));
-            
+
 
             result = tax.Tax(budgetDecorator);
             Console.WriteLine("Tax Decorator: " + result);
@@ -91,6 +97,22 @@ namespace Design_Patterns
 
             result = tax3.Tax(budgetDecorator);
             Console.WriteLine("Tax Decorator: " + result);
+
+            Console.WriteLine(@"    
+            State ------------------------------------------------------
+            ");
+            // Implementing State
+
+            BudgetState Account = new BudgetState(0);
+
+            result = Account.Balance;
+            Console.WriteLine("Balance: " + result);
+
+            Account.DepositMoney(50.0f);
+
+            result = Account.Balance;
+            Console.WriteLine("Balance: " + result);
+
 
             Console.ReadKey();
         }
