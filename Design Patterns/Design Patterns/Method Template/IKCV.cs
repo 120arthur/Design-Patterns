@@ -17,7 +17,7 @@
 
         protected bool AnyItemWorthMoreThan100Dollars(BudgetTax budgetTax)
         {
-            foreach (ItemTemplate item in budgetTax.itens)
+            foreach (ItemTemplate item in budgetTax.Itens)
             {
                 if (item.Price >= 100)
                     return true;

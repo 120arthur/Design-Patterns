@@ -49,6 +49,15 @@
     <Compile Include="Chain Of Responsibility\MoreThanFiveHundredDolars.cs" />
     <Compile Include="Chain Of Responsibility\MorthanFiveItens.cs" />
     <Compile Include="Chain Of Responsibility\WithoutDiscount.cs" />
+    <Compile Include="Decorator\BudgetDecorator.cs" />
+    <Compile Include="Decorator\HigTaxDecorator.cs" />
+    <Compile Include="Decorator\IcmsDecorator.cs" />
+    <Compile Include="Decorator\ICPPDecorator.cs" />
+    <Compile Include="Decorator\IKCVDecorator.cs" />
+    <Compile Include="Decorator\ISSDecorator.cs" />
+    <Compile Include="Decorator\ItemDecorator.cs" />
+    <Compile Include="Decorator\TaxCalculationDecorator.cs" />
+    <Compile Include="Decorator\TaxDecorator.cs" />
     <Compile Include="Method Template\BudgetTax.cs" />
     <Compile Include="Method Template\ICPP.cs" />
     <Compile Include="Method Template\IHIT.cs" />

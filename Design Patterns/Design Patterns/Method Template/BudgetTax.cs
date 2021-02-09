@@ -5,15 +5,15 @@ namespace Design_Patterns.Method_Template
     public class BudgetTax
     {
         public float Value { get; private set; }
-        public List<ItemTemplate> itens;
+        public List<ItemTemplate> Itens;
         public BudgetTax(float value)
         {
             Value = value;
-            itens = new List<ItemTemplate>();
+            Itens = new List<ItemTemplate>();
         }
        public void AddItemToList(ItemTemplate item)
         {
-            itens.Add(item);
+            Itens.Add(item);
         }
     }
 

@@ -9,7 +9,7 @@ namespace Design_Patterns.Method_Template
         protected override bool MustUseTheMaximumTax(BudgetTax budgetTax)
         {
             List<string> inBudget = new List<string>();
-            foreach (ItemTemplate item in budgetTax.itens)
+            foreach (ItemTemplate item in budgetTax.Itens)
             {
                 if (inBudget.Contains(item.Name))
                 {
@@ -26,7 +26,7 @@ namespace Design_Patterns.Method_Template
         }
         protected override float MinimumTax(BudgetTax budgetTax)
         {
-            return budgetTax.Value * (0.01f * budgetTax.itens.Count);
+            return budgetTax.Value * (0.01f * budgetTax.Itens.Count);
         }
     }
 }
