@@ -67,8 +67,6 @@
     <Compile Include="Method Template\TaxCalculationTemplate.cs" />
     <Compile Include="State\BudgetState.cs" />
     <Compile Include="State\AccountState.cs" />
-    <Compile Include="State\NegativeState.cs" />
-    <Compile Include="State\PositiveState.cs" />
     <Compile Include="Strategy\CalculateTax.cs" />
     <Compile Include="Strategy\Icms.cs" />
     <Compile Include="Strategy\Tax.cs" />

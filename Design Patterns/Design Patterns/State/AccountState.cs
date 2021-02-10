@@ -14,16 +14,13 @@ namespace Design_Patterns.State
             if (budgetState.Balance <= 0)
             {
                 Console.WriteLine("You are whith Negative Balance");
-                budgetState.AccountState = new NegativeState();
+                budgetState.AccountState = new BudgetState.NegativeState();
             }
             else
             {
-                budgetState.AccountState = new PositiveState();
+                budgetState.AccountState = new BudgetState.PositiveState();
                 Console.WriteLine("You are whith Positive Balance");
             }
         }
     }
-
-
-
 }
