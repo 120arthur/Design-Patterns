@@ -4,6 +4,7 @@ using Design_Patterns.Chain_Of_Responsibility;
 using Design_Patterns.Method_Template;
 using Design_Patterns.Decorator;
 using Design_Patterns.State;
+using Design_Patterns.Bilder;
 
 namespace Design_Patterns
 {
@@ -112,6 +113,36 @@ namespace Design_Patterns
 
             result = Account.Balance;
             Console.WriteLine("Balance: " + result);
+
+            Console.WriteLine(@"    
+            Bilder ------------------------------------------------------
+            ");
+            // Implementing Bilder
+
+            InoviceBilder inoviceBilder = new InoviceBilder().InoviceSocialReason("Arthur Fernando Lucas")
+                .InoviceDateissue()
+                .InoviceComments("Paid Whith Credit Card")
+                .InoviceCnpj("152.125.122.0")
+                .InoviceAddItem(new ListItem(5000.0f, "Noteboock"))
+                .InoviceAddItem(new ListItem(3000.0f, "Tv"));
+
+            Inovice inovice = inoviceBilder.Bild();
+
+            Console.WriteLine("------------------Inovice------------------");
+            Console.WriteLine("SocialReason: " + inovice.SocialReason);
+            Console.WriteLine("Date: " + inovice.Dateissue);
+            Console.WriteLine("------------------------------------------");
+            for (int i = 0; i < inovice.listItems.Count; i++)
+            {
+                Console.WriteLine("Item: " + inovice.listItems[i].ItemName + "  Price: " + inovice.listItems[i].Value);
+            }
+            Console.WriteLine("Gross Amount: " + inovice.GrossAmount);
+            Console.WriteLine("Tax: " + inovice.Tax);
+            Console.WriteLine("Total: " + (inovice.GrossAmount + inovice.Tax));
+            Console.WriteLine("------------------------------------------");
+            Console.WriteLine("Comments: " + inovice.Comments);
+            Console.WriteLine("Cnpj: " + inovice.Cnpj);
+            Console.WriteLine("------------------------------------------");
 
 
             Console.ReadKey();
