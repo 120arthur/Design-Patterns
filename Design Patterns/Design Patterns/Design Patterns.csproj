@@ -68,6 +68,13 @@
     <Compile Include="Method Template\ItemTemplate.cs" />
     <Compile Include="Method Template\Tax.cs" />
     <Compile Include="Method Template\TaxCalculationTemplate.cs" />
+    <Compile Include="Observer\AdvertisementYoutube.cs" />
+    <Compile Include="Observer\ISubject.cs" />
+    <Compile Include="Observer\IStore.cs" />
+    <Compile Include="Observer\ISubscribe.cs" />
+    <Compile Include="Observer\JoelStationery.cs" />
+    <Compile Include="Observer\PromotionEmail.cs" />
+    <Compile Include="Observer\PromotionSMS.cs" />
     <Compile Include="State\BudgetState.cs" />
     <Compile Include="State\AccountState.cs" />
     <Compile Include="Strategy\CalculateTax.cs" />

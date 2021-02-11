@@ -5,6 +5,7 @@ using Design_Patterns.Method_Template;
 using Design_Patterns.Decorator;
 using Design_Patterns.State;
 using Design_Patterns.Bilder;
+using Design_Patterns.Observer;
 
 namespace Design_Patterns
 {
@@ -143,6 +144,23 @@ namespace Design_Patterns
             Console.WriteLine("Comments: " + inovice.Comments);
             Console.WriteLine("Cnpj: " + inovice.Cnpj);
             Console.WriteLine("------------------------------------------");
+
+            Console.WriteLine(@"    
+            Observer ------------------------------------------------------
+            ");
+            // Implementing Observer
+
+            PromotionEmail promotionEmail = new PromotionEmail();
+            PromotionSMS promotionSMS = new PromotionSMS();
+            AdvertisementYoutube advertisement = new AdvertisementYoutube();
+
+            JoelStationery joelStationery = new JoelStationery();
+
+            joelStationery.NewSubscriber(promotionSMS);
+            joelStationery.NewSubscriber(promotionEmail);
+            joelStationery.NewSubscriber(advertisement);
+
+            joelStationery.Notify();
 
 
             Console.ReadKey();
